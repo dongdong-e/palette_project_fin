@@ -198,7 +198,7 @@ def edit(request, upload_num):
         from_name = request.POST.get('from')
         random_day = random.choice(range(0, int(period) + 1))
         now = datetime.now()
-        td = timedelta(days=random_day, minutes=3)
+        td = timedelta(days=random_day, minutes=0)
         random_date = now + td
 
         phone_to = request.POST.get('phone_to')
