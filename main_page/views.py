@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 import random
 import string
 
+from decouple import config
+
 import sys
 from sdk.api.message import Message
 from sdk.exceptions import CoolsmsException
@@ -228,8 +230,8 @@ def edit(request, upload_num):
 
 
 def send_sms(photo):
-    api_key = "NCSBVGKDO0M3X1SD"
-    api_secret = "Y25LHM18WNIS7XNN6MGRXVUIKWCHDHRT"
+    api_key = config('api_key')
+    api_secret = config('api_secret')
 
     print(photo.info)
     date = photo.info.send_date
