@@ -270,7 +270,7 @@ def photo(request, pk, random_url):
 
     context = { 'photo':photo,
                 'dt':dt }
-    return render(request, 'login/photo.html', context)
+    return render(request, 'main_page/photo_2.html', context)
 
 def main(request):
     return render(request, 'main_page/home.html')
