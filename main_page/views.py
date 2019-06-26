@@ -241,7 +241,7 @@ def send_sms(photo, phone_number):
     dt=date.strftime('%Y%m%d%H%M')
     print(f'dt : {dt}')
     homepage = "https://palette-serendipity.herokuapp.com/"
-    message = f"[Sendipity] 스팸아닙니다ㅠㅠ\n {phone_number}({photo.info.from_name})님으로부터 작지만 소중한 추억이 도착하였습니다.\n {photo.info.link} \n Serendipity 페이지로 놀러오세요:) \n {homepage} "
+    message = f"[Sendipity] 스팸아닙니다ㅠㅠ\n\n {phone_number}({photo.info.from_name})님으로부터 작지만 소중한 추억이 도착하였습니다.\n\n {photo.info.link} \n\n Serendipity 페이지로 놀러오세요:) \n\n {homepage}"
 
     # 4 params(to, from, type, text)설정
     params = dict()
