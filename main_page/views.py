@@ -141,6 +141,8 @@ def set_phone_number(request,upload_num):
         rd = random.choice(range(0,len(photos)))
         photos[rd].info=photo_info
         photos[rd].save()
+        photo_info.link = f"https://pallette-serendipity.com/main/photo/{photos[rd].pk}/{photos[rd].random_url}"
+        photo_info.save()
 
         return redirect('main:confirm', upload_num)
 
@@ -159,7 +161,7 @@ def confirm(request, upload_num):
                 if photo.info is not None:
                     photo.msg_flag = True
                     photo.save()
-                    send_sms(photo)
+                    send_sms(photo,request.user.phone_number)
                 else:
                     photo.delete()
             msg = "성공적으로 보내졌습니다."
@@ -229,7 +231,7 @@ def edit(request, upload_num):
     return render(request,'main_page/edit.html',context)
 
 
-def send_sms(photo):
+def send_sms(photo, phone_number):
     api_key = config('api_key')
     api_secret = config('api_secret')
 
@@ -238,15 +240,14 @@ def send_sms(photo):
     print(f'date:{date}')
     dt=date.strftime('%Y%m%d%H%M')
     print(f'dt : {dt}')
-    #dt = date.year + datetime.month + datetime.day + datetime.hour + datetime.minute
-    #print(dt)
+    message = f"[Sendipity]\n {phone_number}({photo.info.from_name})님으로부터 작지만 소중한 추억이 도착하였습니다.\n {photo.info.link}"
 
     # 4 params(to, from, type, text)설정
     params = dict()
     params['type'] = 'sms'  # Message type ( sms, lms, mms, ata )
     params['to'] = photo.info.phone_to  # 받는사람번호(,로 추가가능)
     params['from'] = '01074210136'  # 보내는사람번호(coolsms사이트에 등록되어있어야함)
-    params['text'] = 'Test Message'  # 보내는 메세지
+    params['text'] = message  # 보내는 메세지
     params['datetime'] = dt
     cool = Message(api_key, api_secret)
 

@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aeca015-a3ae-4877-b3f9-2c2fb14566ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_page/static/js/FileSaver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_page/static/js/html2canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_page/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_page/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_page/templates/main_page/photo_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/templates/main_page/photo_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_page/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="272" column="4" selection-start-line="272" selection-start-column="4" selection-end-line="272" selection-end-column="4" />
+            <state relative-caret-position="415">
+              <caret line="250" column="27" lean-forward="true" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="27" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -39,7 +33,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_page/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_page/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -69,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="44" />
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -95,8 +100,8 @@
         <option value="$PROJECT_DIR$/serendipity/urls.py" />
         <option value="$PROJECT_DIR$/main_page/static/css/style.css" />
         <option value="$PROJECT_DIR$/main_page/templates/main_page/photo_2.html" />
-        <option value="$PROJECT_DIR$/main_page/views.py" />
         <option value="$PROJECT_DIR$/main_page/admin.py" />
+        <option value="$PROJECT_DIR$/main_page/views.py" />
       </list>
     </option>
   </component>
@@ -274,13 +279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serendipity/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -356,20 +354,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_page/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="272" column="4" selection-start-line="272" selection-start-column="4" selection-end-line="272" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_page/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="250" column="27" lean-forward="true" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
