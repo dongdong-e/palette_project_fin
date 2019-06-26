@@ -108,7 +108,7 @@ def set_phone_number(request,upload_num):
 
         random_day = random.choice(range(0, int(period)+1))
         now = datetime.now()
-        td = timedelta(days=random_day, minutes=3)
+        td = timedelta(days=random_day, minutes=0)
         random_date = now + td
         print(f'now: {now}, random_day={random_day}, random_date={random_date}')
         print(random_date)
@@ -240,7 +240,7 @@ def send_sms(photo, phone_number):
     print(f'date:{date}')
     dt=date.strftime('%Y%m%d%H%M')
     print(f'dt : {dt}')
-    message = f"[Sendipity]\n {phone_number}({photo.info.from_name})님으로부터 작지만 소중한 추억이 도착하였습니다.\n {photo.info.link}"
+    message = f"[Sendipity] 스팸아닙니다ㅠㅠ\n {phone_number}({photo.info.from_name})님으로부터 작지만 소중한 추억이 도착하였습니다.\n {photo.info.link}"
 
     # 4 params(to, from, type, text)설정
     params = dict()
