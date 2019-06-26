@@ -1,0 +1,53 @@
+{% extends 'main_page/base.html' %}
+{% load static %}
+
+{% block body %}
+<html>
+<head>
+    <title>Serendipity</title>
+<style>
+        body { background-color: #FEFAEC; }
+        .title_img { width: 100%; }
+
+        .description {
+            text-align: center;
+            font-family: 'Sunflower', sans-serif;
+            font-size: 25px;
+            color: #625772;
+        }
+
+        button{
+            font-family: 'Sunflower', sans-serif;
+            display: block;
+            color: #625772;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+            display: block;
+            margin: 0px auto;
+            cursor:pointer;
+            padding: 1px 147px;
+        }
+
+        .btn-primary1 {
+            font-size: 20px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="title_img" src="{% static 'login/images/header_logo.png' %}" alt="logo">
+    <h3 class="description">{{msg}}</h3>
+    <br><br>
+    {% if request.resolver_match.url_name == 'set_phone_number' %}
+        <button><a href="{% url 'main:set_phone_number' upload_num %}" class="btn btn-primary1">Previous</a></button>
+    {% endif %}
+    <br><br>
+</body>
+</html>
+{% endblock %}

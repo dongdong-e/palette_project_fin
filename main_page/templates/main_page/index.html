@@ -1,0 +1,98 @@
+{% extends 'main_page/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serendipity</title>
+    <style>
+        body { background-color: #FEFAEC; }
+        a img { display: block; margin: 0px auto; }
+        .title_img { width: 100%; }
+
+        .btn-outline-primary1 {
+            font-family: 'Sunflower', sans-serif;
+            color: #625772;
+            display: block;
+            margin: 0px auto;
+            padding: 10px 149px;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+        .btn-outline-primary2 {
+            font-family: 'Sunflower', sans-serif;
+            color: #625772;
+            display: block;
+            margin: 0px auto;
+            padding: 10px 149px;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+        .btn-outline-primary3 {
+            font-family: 'Sunflower', sans-serif;
+            color: #625772;
+            display: block;
+            margin: 0px auto;
+            padding: 10px 155px;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+        .btn-outline-primary4 {
+            font-family: 'Sunflower', sans-serif;
+            color: #625772;
+            display: block;
+            margin: 0px auto;
+            padding: 10px 120px;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/main/"><img class="title_img" src="{% static 'login/images/header_logo.png' %}" alt="logo"></a>
+    <br><br><br>
+    {% if user.is_authenticated %}
+        <a href="/account/logout/"><button type="button" class="btn btn-outline-primary1">LOGOUT</button></a>
+    {% else %}
+        <a href="/account/signup/"><button type="button" class="btn btn-outline-primary2">SIGNUP</button></a>
+        <br>
+        <br>
+        <a href="/account/login/"><button type="button" class="btn btn-outline-primary3">LOGIN</button></a>
+    <br>
+    {% endif %}
+    <br><br>
+    {% if user.is_authenticated %}
+        <a href="/main/upload/"><button type="button" class="btn btn-outline-primary4">UPLOAD PHOTO</button></a>
+        <br><br>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,40 @@
+.polaroid {
+    position: relative;
+    width: 600px;
+    margin: 20px;
+    border: 0.1px solid #cbcdd1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1.0;
+    background-color: white;
+}
+
+.polaroid img {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.polaroid div{
+    padding-bottom: 11px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+.textbox {
+    position: relative;
+}
+
+.textbox label {
+    position: absolute;
+    top: 5px;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.html2canvas-container { max-width: 100%; height: auto; }
+
+.date(text_shadow: 1px 1px 2px #666666; color: red; text-align: center;}

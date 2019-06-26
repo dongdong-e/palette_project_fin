@@ -1,0 +1,91 @@
+{% extends 'login/base.html' %}
+{% load static %}
+
+{% block body %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        body { background-color: #FEFAEC;}
+        .polaroid { font-family: 'Nanum Brush Script', cursive; }
+        .date { font-family: 'Over the Rainbow', cursive; font-size: 50%; opacity: 0.5; font-weight: 600;}
+        body { background-color: #FEFAEC; }
+        a img {border-radius:200px; margin:0 auto; overflow:hidden;}
+        polaroid{ position: relative; }
+        .stamp{ border-radius:200px; margin:0 auto; overflow:hidden;
+                position: absolute;
+                top: -3%;
+                left: 70%;}
+        .date {
+				padding: 5px 10px;
+				text-align: right;
+				position: absolute;
+                top: 75%;
+                left: 65%;}
+    </style>
+    <script src="{% static 'js/html2canvas.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script|Nanum+Pen+Script|Over+the+Rainbow&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <br>
+    <div class="polaroid" id="photo">
+        <img class="stamp" src="{% static 'login/images/logo_transparent.png' %}" style="width: 30%" alt="logo">
+        <img src="{{ photo.photo.url }}"/>
+        <div class="date"><p>2013년02월27일 오후3:00</p></div>
+        <div class="to">TO {{photo.info.to_name}}</div>
+        <div class="message" style="text-align:center">{{photo.info.message}}</div>
+        <div class="from" style="text-align:right">FROM: {{photo.info.from_name}}</div>
+    </div>
+    <br><br>
+    <div class="SNS_Share_Top hidden-xs" align="center">
+        <!-- Share on Twitter -->
+        <a href="#" onclick="javascript:window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20'
+        +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog',
+         'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Twitter"><img src="{% static 'login/images/Twitter.png' %}"></a>
+
+
+        <!-- Share on Facebook -->
+        <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='
+        +encodeURIComponent(document.URL)+'&amp;t='+encodeURIComponent(document.title), 'facebooksharedialog',
+         'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook">
+        <img src="{% static 'login/images/Facebook.png' %}"></a>
+
+
+        <!-- Share on Kakaostory -->
+        <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url='+encodeURIComponent(document.URL), 'kakaostorysharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;" target="_blank" alt="Share on kakaostory">
+        <img src="{% static 'login/images/Kakao_Story.png' %}"></a>
+
+        <!-- download on device -->
+        <a href="#" onclick="PrintDiv()">
+        <img src="{% static 'login/images/download2.png' %}" alt="download" id="blobButton"></a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        function PrintDiv()
+        {
+            html2canvas(document.getElementById("photo")).then(function(canvas){
+            var img = canvas.toDataURL();
+            var link = document.createElement("a");
+            link.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octect-stream");
+            document.body.append(link);
+            link.download = 'polaroid.jpg'
+            link.click();
+            })
+        }
+
+        $('#blobButton').click(function(){
+            PrintDiv();
+        })
+    </script>
+</body>
+</html>
+{% endblock %}

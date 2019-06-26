@@ -1,0 +1,132 @@
+{% extends 'main_page/base.html' %}
+{% load static %}
+{% block body %}
+
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body { background-color: #FEFAEC; }
+        .title_img { width: 100%; }
+
+        button{
+            display: block; margin: 0px auto;
+            cursor:pointer;
+            border: none;
+            padding: 100px;
+        }
+
+
+        .btn-outline-primary1 {
+            font-family: 'Sunflower', sans-serif;
+            display: block;
+            margin-top: 0px auto;
+            padding: 10px 157px;
+            color: #625772;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+        .btn-outline-primary2 {
+            font-family: 'Sunflower', sans-serif;
+            display: block;
+            margin: 0px auto;
+            padding: 10px 166px;
+            color: #625772;
+            font-size: 17px;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 10px;
+            background-color: #FEFAEC;
+            border-color: #625772;
+            border-style: solid;
+        }
+
+        .description {
+            text-align: center;
+            font-family: 'Sunflower', sans-serif;
+            font-size: 20px;
+            color: #625772;
+        }
+
+        p {
+            color: #FEFAEC;
+        }
+
+
+
+        .nopad {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        /*image gallery*/
+        .image-checkbox {
+            cursor: pointer;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border: 4px solid transparent;
+            margin-bottom: 0;
+            outline: 0;
+        }
+        .image-checkbox-checked {
+            border-color: #FEFAEC;
+        }
+        .image-checkbox .fa {
+          position: absolute;
+          color: #FEFAEC;
+          background-color: #FEFAEC;
+          padding: 10px;
+          top: 0;
+          right: 0;
+        }
+        .image-checkbox-checked .fa {
+          display: block !important;
+        }
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/main/"><img class="title_img" src="{% static 'login/images/header_logo.png' %}" alt="logo"></a>
+    <br><br><br>
+    <h3 class="description">Check photo(s) you want to send.</h3>
+    <br><br>
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {% for p in photos %}
+                <div style="border: 1px; float: left; width: 25%;">
+                    <label class="image-checkbox">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="myCheckbox1" name="cbox" value={{p.pk}}>
+                            <span class="checkmark"></span>
+                        </div>
+                        <img src = "{{p.photo.url}}" width="300" height="300">
+                    </label>
+                </div>
+            {% endfor %}
+            <p>칸 넓히기</p>
+            <div>
+                <br>
+                <button class="btn btn-outline-primary1" type="submit" name="delete">DELETE</button>
+                <br>
+                <button class="btn btn-outline-primary2" type="submit" name="next">NEXT</button>
+            </div>
+        </form>
+        <br><br><br><br>
+    </div>
+</body>
+</html>
+{% endblock %}
