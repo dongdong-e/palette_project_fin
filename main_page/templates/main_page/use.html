@@ -2,8 +2,6 @@
 {% load static %}
 
 {% block body %}
-
-!-- Latest compiled and minified CSS -->
 <!doctype html>
 <html>
     <head>
@@ -98,7 +96,7 @@
                 <p class="text"><b>3. 정보 입력</b></p>
                 <p class="text">발신인, 수신인의 정보(이름, 전화번호)와 함께 전송할 메시지를 입력해주세요.</p>
                 <p class="text">발신 기간은 제한이 없으며, 입력한 기간 안에 랜덤으로 전송됩니다.</p>
-                <p class="text">예를 들어, 기간을 30으로 입력하시면,<br>랜덤으로 기간을 선택하여(ex 14) 전송 예약을 하는 날로부터 14일 후에 메시지가 전송됩니다.</p>
+                <p class="text">예를 들어, 기간을 30으로 입력하시면,<br>랜덤으로 30일 이내의 날짜를 선택하여(ex 14) 전송 예약을 하는 날로부터 14일 후에 메시지가 전송됩니다.</p>
             </div>
             <div class="col">
                 <img class="image" src="{% static 'login/images/sms.png' %}" style="width: 50%"><br>
