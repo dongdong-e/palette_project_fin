@@ -15,7 +15,7 @@
                 font-family: 'Sunflower', sans-serif;
             }
 
-            .col {
+            .menu {
                 margin-top: 35px;
                 font-weight: bold;
                 background-color: #FEFAEC;
@@ -34,11 +34,10 @@
     </head>
     <body>
         <div class="row">
-          <div class="col"><a href="{% url 'main:home' %}" style="color: #625772">About Serendipity</a></div>
-          <div class="col"><a href="{% url 'main:use' %}" style="color: #625772">How to use</a></div>
-          <div class="col"><a href="{% url 'main:index' %}" style="color: #625772">Start service</a></div>
-          <div class="col"><a href="mailto:kwon0136@naver.com" style="color: #625772">Contact</a></div>
-
+          <div class="col menu"><a href="{% url 'main:main' %}" style="color: #625772">About Serendipity</a></div>
+          <div class="col menu"><a href="{% url 'main:use' %}" style="color: #625772">How to use</a></div>
+          <div class="col menu"><a href="{% url 'main:index' %}" style="color: #625772">Start service</a></div>
+          <div class="col menu"><a href="mailto:kwon0136@naver.com" style="color: #625772">Contact</a></div>
         </div>
 
         {% block body %}
