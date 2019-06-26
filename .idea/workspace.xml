@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aeca015-a3ae-4877-b3f9-2c2fb14566ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main_page/templates/main_page/use.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/templates/main_page/use.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serendipity/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/serendipity/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serendipity/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="161">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -279,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serendipity/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="161">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
