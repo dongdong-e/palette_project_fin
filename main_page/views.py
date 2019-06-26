@@ -244,7 +244,7 @@ def send_sms(photo, phone_number):
 
     # 4 params(to, from, type, text)설정
     params = dict()
-    params['type'] = 'sms'  # Message type ( sms, lms, mms, ata )
+    params['type'] = 'lms'  # Message type ( sms, lms, mms, ata )
     params['to'] = photo.info.phone_to  # 받는사람번호(,로 추가가능)
     params['from'] = '01074210136'  # 보내는사람번호(coolsms사이트에 등록되어있어야함)
     params['text'] = message  # 보내는 메세지

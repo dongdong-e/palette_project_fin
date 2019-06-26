@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aeca015-a3ae-4877-b3f9-2c2fb14566ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main_page/templates/main_page/confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/templates/main_page/confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_page/templates/main_page/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/templates/main_page/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +17,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/photo_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
+            <state relative-caret-position="851">
               <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/confirm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/delete.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2566" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -24,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_page/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="250" column="27" lean-forward="true" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="27" />
+            <state relative-caret-position="323">
+              <caret line="246" column="25" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -63,15 +90,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_page/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
@@ -101,6 +119,8 @@
         <option value="$PROJECT_DIR$/main_page/static/css/style.css" />
         <option value="$PROJECT_DIR$/main_page/templates/main_page/photo_2.html" />
         <option value="$PROJECT_DIR$/main_page/admin.py" />
+        <option value="$PROJECT_DIR$/main_page/templates/main_page/confirm.html" />
+        <option value="$PROJECT_DIR$/main_page/templates/main_page/edit.html" />
         <option value="$PROJECT_DIR$/main_page/views.py" />
       </list>
     </option>
@@ -123,6 +143,11 @@
             <path>
               <item name="serendipity" type="b2602c69:ProjectViewProjectNode" />
               <item name="serendipity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serendipity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serendipity" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serendipity" type="b2602c69:ProjectViewProjectNode" />
@@ -340,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/photo_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_page/static/js/FileSaver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -377,10 +395,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/photo_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2566" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page/templates/main_page/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_page/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="250" column="27" lean-forward="true" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="27" />
+        <state relative-caret-position="323">
+          <caret line="246" column="25" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
