@@ -141,7 +141,7 @@ def set_phone_number(request,upload_num):
         rd = random.choice(range(0,len(photos)))
         photos[rd].info=photo_info
         photos[rd].save()
-        photo_info.link = f"https://pallette-serendipity.com/main/photo/{photos[rd].pk}/{photos[rd].random_url}"
+        photo_info.link = f"https://palette-serendipity.herokuapp.com/main/photo/{photos[rd].pk}/{photos[rd].random_url}"
         photo_info.save()
 
         return redirect('main:confirm', upload_num)
